@@ -130,17 +130,16 @@ export const LoginPage = ({ showPasswordToggle, showPassword }) => {
 
           <div className="flex flex-row mb-4 mt-1 text-end">
             <div className="">
+              {/* Added margin-right to create space */}
               <CheckBox />
             </div>
-            <p className="text-sm">
-              <a
-                href="/ForgotPassword"
-                className="text-black font-sans underline"
-              >
-                Forgot Password?
+            <div className="ml-auto">
+              <a href="/ForgotPassword" className="text-gray-500">
+                Forgot password?
               </a>
-            </p>
+              </div>
           </div>
+
           <button
             type="submit"
             className="w-full bg-gray-500 text-white py-2 rounded-3xl hover:bg-gray-800 transition duration-200"
