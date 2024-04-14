@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Spinner from 'react-spinkit'; // Import Spinner component
+import Spinner from "react-spinkit"; // Import Spinner component
 
 const SplashScreen = () => {
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ const SplashScreen = () => {
         color="blue" // Customize spinner color if needed
         fadeIn="none"
         className="w-64 h-64 animate-fade-in animate-spin"
-        style={{ display: isLoading ? 'block' : 'none' }} // Show spinner when isLoading is true
+        style={{ display: isLoading ? "block" : "none" }} // Show spinner when isLoading is true
       />
     </div>
   );

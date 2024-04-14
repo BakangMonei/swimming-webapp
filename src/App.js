@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import SplashScreen from "./components/SplashScreen";
 import "./App.css";
-import LoginPage from "./Auth/LoginPage";
+import LoginPage from "./auth/LoginPage";
 import { auth } from "./firebase/firebase";
 
 // Function to check if user is authenticated
