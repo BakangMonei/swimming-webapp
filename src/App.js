@@ -5,10 +5,16 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import SplashScreen from "./components/SplashScreen";
+import { Provider } from "react-redux";
+import { createStore } from "redux"; // Import createStore from redux
+import rootReducer from "./redux/reducers"; // Import your root reducer
+import SplashScreen from "./layouts/SplashScreen";
 import "./App.css";
 import LoginPage from "./auth/LoginPage";
 import { auth } from "./firebase/firebase";
+
+// Create Redux store
+const store = createStore(rootReducer);
 
 // Function to check if user is authenticated
 const isAuthenticated = () => {
@@ -22,21 +28,24 @@ const PrivateRoute = ({ element, path }) => {
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<SplashScreen />} />
-        <Route path="/SplashScreen" element={<SplashScreen />} />
-        <Route path="/LoginPage" element={<LoginPage />} />
-        {/* Private routes */}
-        {/* Uncomment the following lines when you need private routes */}
-        {/* 
+    // Provide the Redux store to your React app
+    <Provider store={store}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<SplashScreen />} />
+          <Route path="/SplashScreen" element={<SplashScreen />} />
+          <Route path="/LoginPage" element={<LoginPage />} />
+          {/* Private routes */}
+          {/* Uncomment the following lines when you need private routes */}
+          {/* 
         <Route
           path="/UserDashboard"
           element={<PrivateRoute element={<UserDashboard />} />}
         />
         */}
-      </Routes>
-    </Router>
+        </Routes>
+      </Router>
+    </Provider>
   );
 }
 

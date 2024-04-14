@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { showPassword } from "../../../src/redux/actions/passwordActions";
+import { showPassword } from "../redux/actions/passwordActions";
 import { signInWithEmailAndPassword } from "firebase/auth"; // Import Firebase authentication function
 import {
   getFirestore,
@@ -10,11 +10,11 @@ import {
   getDocs,
 } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import Checkbox from "../../components/Checkbox/checkbox";
+import CheckBox from "../components/CheckBox";
 
-import googleImage from "../../assets/images/google_image.png";
-import facebookImage from "../../assets/images/facebook_image.png";
-import { auth } from "../../firebase";
+import googleImage from "../assets/images/google_image.png";
+import facebookImage from "../assets/images/facebook_image.png";
+import { auth } from "../firebase/firebase";
 
 export const LoginPage = ({ showPasswordToggle, showPassword }) => {
   const [email, setEmail] = useState("");
@@ -130,7 +130,7 @@ export const LoginPage = ({ showPasswordToggle, showPassword }) => {
 
           <div className="flex flex-row mb-4 mt-1 text-end">
             <div className="">
-              <Checkbox />
+              <CheckBox />
             </div>
             <p className="text-sm">
               <a
