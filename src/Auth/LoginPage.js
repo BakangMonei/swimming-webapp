@@ -10,7 +10,7 @@ import {
   getDocs,
 } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import CheckBox from "../components/CheckBox";
+import CheckBox from "../components/checkbox/CheckBox";
 
 import googleImage from "../assets/images/google_image.png";
 import facebookImage from "../assets/images/facebook_image.png";

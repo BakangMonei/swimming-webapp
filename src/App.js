@@ -12,6 +12,7 @@ import SplashScreen from "./layouts/SplashScreen";
 import "./App.css";
 import LoginPage from "./auth/LoginPage";
 import { auth } from "./firebase/firebase";
+import MainLayout from "./layouts/MainLayout";
 
 // Create Redux store
 const store = createStore(rootReducer);
@@ -37,12 +38,12 @@ function App() {
           <Route path="/LoginPage" element={<LoginPage />} />
           {/* Private routes */}
           {/* Uncomment the following lines when you need private routes */}
-          {/* 
+          
         <Route
           path="/UserDashboard"
-          element={<PrivateRoute element={<UserDashboard />} />}
+          element={<PrivateRoute element={<MainLayout />} />}
         />
-        */}
+       
         </Routes>
       </Router>
     </Provider>
