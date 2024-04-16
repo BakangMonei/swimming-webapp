@@ -13,6 +13,7 @@ import "./App.css";
 import LoginPage from "./auth/LoginPage";
 import { auth } from "./firebase/firebase";
 import MainLayout from "./layouts/MainLayout";
+import Rankings from "./layouts/rankings/Rankings";
 
 // Create Redux store
 const store = createStore(rootReducer);
@@ -38,12 +39,16 @@ function App() {
           <Route path="/LoginPage" element={<LoginPage />} />
           {/* Private routes */}
           {/* Uncomment the following lines when you need private routes */}
-          
-        <Route
-          path="/UserDashboard"
-          element={<PrivateRoute element={<MainLayout />} />}
-        />
-       
+          <Route path="/UserDashboard" element={<MainLayout />} />
+          <Route path="/Rankings" element={<Rankings />} />
+          {/* <Route
+            path="/UserDashboard"
+            element={<PrivateRoute element={<MainLayout />} />}
+          /> */}
+          {/* <Route
+            path="/Rankings"
+            element={<PrivateRoute element={<Rankings />} />}
+          /> */}
         </Routes>
       </Router>
     </Provider>
