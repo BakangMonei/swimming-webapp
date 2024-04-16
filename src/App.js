@@ -10,7 +10,7 @@ import { createStore } from "redux"; // Import createStore from redux
 import rootReducer from "./redux/reducers"; // Import your root reducer
 import SplashScreen from "./layouts/SplashScreen";
 import "./App.css";
-import LoginPage from "./Auth/LoginPage";
+import LoginPage from "./auth/LoginPage";
 import { auth } from "./firebase/firebase";
 import MainLayout from "./layouts/MainLayout";
 import Rankings from "./layouts/rankings/Rankings";
