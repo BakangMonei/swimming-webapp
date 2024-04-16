@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-function RecordsTable() {
+const RecordsTable = () => {
   const [records, setRecords] = useState([]);
 
   useEffect(() => {

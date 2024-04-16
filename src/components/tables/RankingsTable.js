@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-function RankingsTable() {
+const RankingsTable =()=> {
   const [records, setRecords] = useState([]); // World records
   useEffect(() => {
     const fetchRecords = async () => {
