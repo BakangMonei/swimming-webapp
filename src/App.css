@@ -49,6 +49,10 @@
   border-radius: 10px;
   margin: 0 auto;
 }
+.border-b-full {
+  border-bottom-width: 2px;
+}
+
 
 .createadmin_container {
   background-color: rgba(

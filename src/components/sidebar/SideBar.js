@@ -5,7 +5,7 @@ import SideBarFooter from "../footer/SideBarFooter";
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col w-64 h-screen bg-gray-800">
+    <div className="flex flex-col w-1/5 h-screen bg-gray-800">
       <div className="flex items-center justify-center h-16 bg-gray-900">
         <h1 className="text-white font-extrabold text-xl">Swimming WebApp</h1>
       </div>

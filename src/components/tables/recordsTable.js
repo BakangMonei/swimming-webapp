@@ -5,10 +5,6 @@ import { firestore } from "../../firebase/firebase"; // Importing db from fireba
 const RecordsTable = () => {
   const [records, setRecords] = useState([]);
 
-  const autoGenerateImage = () => {
-    const randomImage = Math.floor(Math.random() * 10) + 1;
-    return `/images/person/${randomImage}.jpg`;
-  };
 
   useEffect(() => {
     const fetchRecords = async () => {
@@ -29,7 +25,6 @@ const RecordsTable = () => {
   }, []);
 
   return (
-    <div className="border-2 border-red-500 p-1 rounded-xl max-w-full">
       <div class="container max-w-3xl px-4 mx-auto sm:px-8">
         <div class="py-8">
           <div class="px-4 py-4 -mx-4 overflow-x-auto sm:-mx-8 sm:px-8">
@@ -39,19 +34,19 @@ const RecordsTable = () => {
                   <tr>
                     <th
                       scope="col"
-                      class="px-5 py-3 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200"
+                      class="px-5 py-3 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200 border-r"
                     >
                       CATALOGUE
                     </th>
                     <th
                       scope="col"
-                      class="px-5 py-3 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200"
+                      class="px-5 py-3 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200 border-r"
                     >
                       MEN
                     </th>
                     <th
                       scope="col"
-                      class="px-5 py-3 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200"
+                      class="px-5 py-3 text-sm font-normal text-left text-gray-800 uppercase bg-white border-b border-gray-200 border-r"
                     >
                       WOMEN
                     </th>
@@ -66,7 +61,7 @@ const RecordsTable = () => {
                 <tbody>
                   {records.map((record) => (
                     <tr key={record.id}>
-                      <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                      <td class="px-5 py-5 text-sm bg-white border-b border-gray-200 border-r">
                         <div class="flex items-center">
                           <div class="flex-shrink-0">
                             <a href="#" class="relative block">
@@ -78,19 +73,19 @@ const RecordsTable = () => {
                               />
                             </a>
                           </div>
-                          <div class="ml-3">
+                          <div class="ml-3 ">
                             <p class="text-gray-900 whitespace-no-wrap">
                               {record.catalogue}
                             </p>
                           </div>
                         </div>
                       </td>
-                      <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                      <td class="px-5 py-5 text-sm bg-white border-b border-gray-200 border-r">
                         <p class="text-gray-900 whitespace-no-wrap">
                           {record.men}
                         </p>
                       </td>
-                      <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
+                      <td class="px-5 py-5 text-sm bg-white border-b border-gray-200 border-r">
                         <p class="text-gray-900 whitespace-no-wrap">
                           {record.women}
                         </p>
@@ -165,7 +160,6 @@ const RecordsTable = () => {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 };

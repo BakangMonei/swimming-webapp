@@ -2,21 +2,22 @@ import React from "react";
 import Sidebar from "../../components/sidebar/SideBar";
 import TopTimes from "../../components/searchbox/TopTimes";
 import RecordsTable from "../../components/tables/RecordsTable";
+import Tables from "../../components/tables/Tables";
 
 const Records = () => {
   return (
     <div className="flex">
-    {/* Sidebar component */}
-    <div>
-      <Sidebar />
-    </div>
+    {/* Sidebar */}
+    <Sidebar />
   
-    {/* Record Header & Table Record component */}
-    <div className="p-10">
-      <h1 className="pr-10 text-8xl text-blue-700 font-mono text-center border-b-1 border-b-green-500">
+    <div className="flex flex-col flex-grow">
+      {/* Records Header */}
+      <h1 className="pr-10 text-8xl text-blue-700 font-mono text-center border-b-full">
         Records
       </h1>
-      <RecordsTable />
+  
+      {/* Tables */}
+      <Tables />
     </div>
   </div>
   
