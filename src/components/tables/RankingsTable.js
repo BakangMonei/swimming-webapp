@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-const RankingsTable =()=> {
+const RankingsTable = () => {
   const [records, setRecords] = useState([]); // World records
   useEffect(() => {
     const fetchRecords = async () => {
@@ -50,7 +50,11 @@ const RankingsTable =()=> {
   return (
     <div className="mt-12 mb-8 flex flex-col gap-12">
       <Card>
-      <CardHeader variant="gradient" color="gray" className=" mb-5 p-8 bg-black">
+        <CardHeader
+          variant="gradient"
+          color="gray"
+          className=" mb-5 p-8 bg-black"
+        >
           <Typography variant="h6" color="white">
             World Records
           </Typography>
@@ -59,7 +63,15 @@ const RankingsTable =()=> {
           <table className="w-full min-w-[640px] table-auto">
             <thead>
               <tr>
-                {["Stroke", "Athlete Name", "Date Of Birth", "Club", "Record Date", "Record Time", "City"].map((el) => (
+                {[
+                  "Stroke",
+                  "Athlete Name",
+                  "Date Of Birth",
+                  "Club",
+                  "Record Date",
+                  "Record Time",
+                  "City",
+                ].map((el) => (
                   <th
                     key={el}
                     className="border-b border-blue-gray-50 py-3 px-5 text-left"
@@ -105,7 +117,11 @@ const RankingsTable =()=> {
         </CardBody>
       </Card>
       <Card>
-      <CardHeader variant="gradient" color="gray" className=" mb-5 p-8 bg-black">
+        <CardHeader
+          variant="gradient"
+          color="gray"
+          className=" mb-5 p-8 bg-black"
+        >
           <Typography variant="h6" color="white">
             Olympic Records
           </Typography>
@@ -114,7 +130,15 @@ const RankingsTable =()=> {
           <table className="w-full min-w-[640px] table-auto">
             <thead>
               <tr>
-                {["Stroke", "Athlete Name", "Date Of Birth", "Club", "Record Date", "Record Time", "City"].map((el2) => (
+                {[
+                  "Stroke",
+                  "Athlete Name",
+                  "Date Of Birth",
+                  "Club",
+                  "Record Date",
+                  "Record Time",
+                  "City",
+                ].map((el2) => (
                   <th
                     key={el2}
                     className="border-b border-blue-gray-50 py-3 px-5 text-left"
@@ -161,6 +185,6 @@ const RankingsTable =()=> {
       </Card>
     </div>
   );
-}
+};
 
 export default RankingsTable;

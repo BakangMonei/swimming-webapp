@@ -4,7 +4,7 @@ import Records from "./records/Records";
 const MainLayout = () => {
   return (
     <div>
-      <Records/>
+      <Records />
     </div>
   );
 };

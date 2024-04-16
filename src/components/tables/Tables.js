@@ -1,35 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import { firestore } from '../../firebase/firebase'; // Import firestore instance
-
-
-
+import { firestore } from "../../firebase/firebase"; // Import firestore instance
 
 // Table component
 const Table = ({ category }) => {
   const [data, setData] = useState([]);
 
-
   // Function to fetch data from Firestore based on category
-const fetchDataFromFirestore = async (category) => {
-  try {
-    const querySnapshot = await getDocs(collection(firestore, category));
-    const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-    return data;
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    throw error;
-  }
-};
+  const fetchDataFromFirestore = async (category) => {
+    try {
+      const querySnapshot = await getDocs(collection(firestore, category));
+      const data = querySnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      return data;
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      throw error;
+    }
+  };
 
   useEffect(() => {
-    fetchDataFromFirestore(category).then(result => {
-      setData(result);
-    }).catch(error => {
-      console.error('Error fetching data:', error);
-    });
+    fetchDataFromFirestore(category)
+      .then((result) => {
+        setData(result);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   }, [category]);
-  
 
   return (
     <table>
@@ -48,7 +48,7 @@ const fetchDataFromFirestore = async (category) => {
         </tr>
       </thead>
       <tbody>
-        {data.map(item => (
+        {data.map((item) => (
           <tr key={item.id}>
             <td>{item.id}</td>
             <td>{item.firstname}</td>

@@ -83,6 +83,6 @@ const RecordsTable = () => {
       </Card>
     </div>
   );
-}
+};
 
 export default RecordsTable;

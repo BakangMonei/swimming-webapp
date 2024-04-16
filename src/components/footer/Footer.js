@@ -1,5 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { FaRegClock, FaRegCalendarAlt, FaHeart, FaEnvelope } from 'react-icons/fa'; // Importing icons from react-icons library
+import React, { useState, useEffect } from "react";
+import {
+  FaRegClock,
+  FaRegCalendarAlt,
+  FaHeart,
+  FaEnvelope,
+} from "react-icons/fa"; // Importing icons from react-icons library
 
 const Footer = () => {
   const [dateTime, setDateTime] = useState(new Date());

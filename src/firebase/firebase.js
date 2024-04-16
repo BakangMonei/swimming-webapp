@@ -15,7 +15,7 @@ const firebaseConfig = {
   storageBucket: "swimming-webapp.appspot.com",
   messagingSenderId: "684335922955",
   appId: "1:684335922955:web:f10f5c4251b6b82927ec0e",
-  measurementId: "G-FHN1M148KJ"
+  measurementId: "G-FHN1M148KJ",
 };
 
 // Initialize Firebase
@@ -26,6 +26,5 @@ const auth = getAuth(firebaseApp); // Initialize Auth
 const firestore = getFirestore(firebaseApp); // Initialize Firestore
 const database = getDatabase(firebaseApp); // Initialize Realtime Database
 const storage = getStorage(firebaseApp); // Initialize Storage
-
 
 export { auth, firestore, database, storage, firebaseApp };

@@ -37,7 +37,7 @@ const SearchComponent = () => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      
+
       <svg
         className="absolute right-1 z-10 cursor-pointer"
         width={24}
