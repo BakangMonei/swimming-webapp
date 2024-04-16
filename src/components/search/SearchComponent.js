@@ -31,14 +31,15 @@ const SearchComponent = () => {
   return (
     <div className="flex justify-start items-center py-7 relative">
       <input
-        className="text-sm leading-none text-left text-gray-600 px-4 py-3 w-full border rounded border-gray-300 outline-none"
+        className="text-sm leading-none text-left text-gray-600 px-4 py-3 w-3/5 border rounded border-gray-300 outline-none"
         type="text"
         placeholder="Search"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
+      
       <svg
-        className="absolute right-3 z-10 cursor-pointer"
+        className="absolute right-1 z-10 cursor-pointer"
         width={24}
         height={24}
         viewBox="0 0 24 24"
