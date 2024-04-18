@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+const express = require('express');
+const app = express();
+const userRoutes = require('./routes/userRoutes');
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// Middleware
+app.use(express.json());
 
-export default App;
+// Routes
+app.use('/api/users', userRoutes);
+
+// Server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
