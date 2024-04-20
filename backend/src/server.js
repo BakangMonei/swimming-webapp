@@ -146,6 +146,20 @@ app.post('/upload', upload.single('csvFile'), (req, res) => {
         });
 });
 
+// API endpoint to get athlete data
+app.get('/upload', async (req, res) => {
+    try {
+        const client = await pool.connect();
+        const result = await client.query('SELECT * FROM Athlete');
+        const athletes = result.rows;
+        client.release();
+        res.json(athletes);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).json({ error: 'Error fetching data' });
+    }
+});
+
 app.listen(port, () => {
     console.log(`Backend server listening at http://localhost:${port}`);
 });
