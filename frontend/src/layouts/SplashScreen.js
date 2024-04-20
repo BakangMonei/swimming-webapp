@@ -11,7 +11,6 @@ const SplashScreen = () => {
     const timer = setTimeout(() => {
       setIsLoading(false);
       navigate("/LoginPage"); // Navigate to LoginPage.js
-      // navigate("/CSVFormData");
     }, 4000);
 
     return () => clearTimeout(timer);
