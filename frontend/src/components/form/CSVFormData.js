@@ -1,60 +1,44 @@
-import React, { useState }  from "react";
+import React, { useState } from 'react';
 
 const CSVFormData = () => {
-
-    const [selectedFile, setSelectedFile] = useState(null);
+    const [file, setFile] = useState(null);
 
     const handleFileChange = (e) => {
-        setSelectedFile(e.target.files[0]);
+        setFile(e.target.files[0]);
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const handleSubmit = async () => {
+        if (!file) {
+            alert('Please select a file');
+            return;
+        }
+
         const formData = new FormData();
-        formData.append('csvFile', selectedFile);
-    
+        formData.append('file', file);
+
         try {
-            const response = await fetch('http://localhost:3001/upload', {
+            const response = await fetch('http://localhost:5000/upload', {
                 method: 'POST',
-                body: formData
+                body: formData,
             });
-            if (!response.ok) {
-                throw new Error('Upload failed');
+            if (response.ok) {
+                window.location.href = 'http://localhost:3000/athletes';
+            } else {
+                alert('Error uploading file');
             }
-            alert('File uploaded successfully!');
         } catch (error) {
-            console.error('Upload error:', error);
-            alert('Upload failed');
+            console.error('Error:', error);
+            alert('Error uploading file');
         }
     };
-    
 
     return (
-        <div className="max-w-md mx-auto p-4 bg-white shadow-md rounded-md">
-            <h2 className="text-lg font-semibold mb-4">Upload CSV File</h2>
-            <form onSubmit={handleSubmit}>
-                <div className="mb-4">
-                    <input
-                        type="file"
-                        name="csvFile"
-                        className="border-gray-300 border w-full p-2 rounded-md"
-                        accept=".csv"
-                        onChange={handleFileChange}
-                        required
-                    />
-                </div>
-                <div>
-                    <button
-                        type="submit"
-                        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-                    >
-                        Upload
-                    </button>
-                </div>
-            </form>
+        <div>
+            <h1>Upload CSV File</h1>
+            <input type="file" accept=".csv" onChange={handleFileChange} />
+            <button onClick={handleSubmit}>Upload</button>
         </div>
     );
-}
-
+};
 
 export default CSVFormData;

@@ -1,44 +1,60 @@
 import React, { useState, useEffect } from 'react';
 
-const AthleteTable = () => {
-    const [athleteData, setAthleteData] = useState([]);
+const AthletesTable = () => {
+    const [athletes, setAthletes] = useState([]);
 
     useEffect(() => {
-        fetchAthleteData();
+        fetchAthletes();
     }, []);
 
-    const fetchAthleteData = async () => {
+    const fetchAthletes = async () => {
         try {
-            const response = await fetch('http://localhost:3001/upload');
-            if (!response.ok) {
-                throw new Error('Failed to fetch data');
+            const response = await fetch('http://localhost:5000/athletes');
+            if (response.ok) {
+                const data = await response.json();
+                setAthletes(data);
+            } else {
+                alert('Error fetching athletes');
             }
-            const data = await response.json();
-            setAthleteData(data);
         } catch (error) {
-            console.error('Error fetching data:', error);
+            console.error('Error:', error);
+            alert('Error fetching athletes');
         }
     };
 
     return (
         <div>
-            <h2>Athlete Data</h2>
+            <h1>Athletes Table</h1>
             <table>
                 <thead>
                     <tr>
-                        <th>Athlete</th>
-                        <th>First</th>
-                        <th>Last</th>
-                        {/* Add more table headers as needed */}
+                        <th>Module Leader Email</th>
+                        <th>Module Leader Name</th>
+                        <th>Student Email</th>
+                        <th>Student ID Number</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                        <th>Exam Room</th>
+                        <th>Faculty</th>
+                        <th>Module Name</th>
+                        <th>Date and Time</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {athleteData.map((athlete, index) => (
+                    {athletes.map((athlete, index) => (
                         <tr key={index}>
-                            <td>{athlete.athlete}</td>
-                            <td>{athlete.first}</td>
-                            <td>{athlete.last}</td>
-                            {/* Add more table cells as needed */}
+                            <td>{athlete.moduleLeaderEmail}</td>
+                            <td>{athlete.moduleLeaderName}</td>
+                            <td>{athlete.studentEmail}</td>
+                            <td>{athlete.studentIDNumber}</td>
+                            <td>{athlete.firstName}</td>
+                            <td>{athlete.lastName}</td>
+                            <td>{athlete.phoneNumber}</td>
+                            <td>{athlete.examRoom}</td>
+                            <td>{athlete.faculty}</td>
+                            <td>{athlete.moduleName}</td>
+                            <td>{athlete.dateAndTime}</td>
                         </tr>
                     ))}
                 </tbody>
@@ -47,4 +63,4 @@ const AthleteTable = () => {
     );
 };
 
-export default AthleteTable;
+export default AthletesTable;
