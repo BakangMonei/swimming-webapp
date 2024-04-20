@@ -14,6 +14,7 @@ import LoginPage from "../src/auth/LoginPage";
 import { auth } from "./firebase/firebase";
 import MainLayout from "./layouts/MainLayout";
 import Rankings from "./layouts/rankings/Rankings";
+import CSVFormData from "./components/form/CSVFormData";
 
 // Create Redux store
 const store = createStore(rootReducer);
@@ -35,6 +36,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<SplashScreen />} />
+          <Route path ="/CSVFormData" element={<CSVFormData/>} />
           <Route path="/SplashScreen" element={<SplashScreen />} />
           <Route path="/LoginPage" element={<LoginPage />} />
           {/* Private routes */}
