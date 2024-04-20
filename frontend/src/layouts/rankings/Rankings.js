@@ -3,6 +3,7 @@ import Sidebar from "../../components/sidebar/SideBar";
 import Footer from "../../components/footer/Footer";
 import RankingsTable from "../../components/tables/RankingsTable";
 import SearchComponent from "../../components/search/SearchComponent";
+import AthletesTable from "../../components/tables/AthleteTable";
 
 const Rankings = () => {
   return (
@@ -22,6 +23,8 @@ const Rankings = () => {
           {/* Tables */}
           <div className="p-5">
             <RankingsTable />
+
+            <AthletesTable/>
           </div>
         </div>
       </div>

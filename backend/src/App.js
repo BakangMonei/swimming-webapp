@@ -3,9 +3,13 @@ const multer = require('multer');
 const { Client } = require('pg');
 const csv = require('csv-parser');
 const fs = require('fs');
+const cors = require('cors'); // Import CORS middleware
 
 const app = express();
 const PORT = 5000;
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Multer setup for file upload
 const upload = multer({ dest: 'uploads/' });
@@ -98,10 +102,11 @@ app.get('/athletes', async (req, res) => {
         const queryResult = await client.query('SELECT * FROM dummyDB');
         res.status(200).json(queryResult.rows);
     } catch (error) {
-        console.error('Error:', error);
-        res.status(500).send('Internal server error');
+        console.error('Error fetching athletes:', error);
+        res.status(500).send('Error fetching athletes');
     }
 });
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
