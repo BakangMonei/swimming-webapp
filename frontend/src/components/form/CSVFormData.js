@@ -2,9 +2,13 @@ import React, { useState } from "react";
 
 const CSVFormData = () => {
   const [file, setFile] = useState(null);
+  const [file2, setFile2] = useState(null);
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
+  };
+  const handleFileChange2 = (e) => {
+    setFile2(e.target.files[0]);
   };
 
   const handleSubmit = async () => {
@@ -33,18 +37,18 @@ const CSVFormData = () => {
   };
 
   const handleSubmitAthletes = async () => {
-    if (!file) {
+    if (!file2) {
       alert("Please select a file");
       return;
     }
 
-    const formData = new FormData();
-    formData.append("file", file);
+    const formData2 = new FormData();
+    formData2.append("file", file2);
 
     try {
-      const response = await fetch("http://localhost:5000/uploadAthletics", {
+      const response = await fetch("http://localhost:5000/uploadAthlete", {
         method: "POST",
-        body: formData,
+        body: formData2,
       });
       if (response.ok) {
         window.location.href = "http://localhost:3000/getAthletes";
@@ -76,11 +80,11 @@ const CSVFormData = () => {
       </div>
 
       <div>
-        <h1 className="text-2xl font-bold mb-2">Upload Athletes CSV File</h1>
+        <h1 className="text-2xl font-bold mb-2">Upload Athletes  Here CSV File</h1>
         <input
           type="file"
           accept=".csv"
-          onChange={handleFileChange}
+          onChange={handleFileChange2}
           className="mb-2"
         />
         <button

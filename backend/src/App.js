@@ -115,7 +115,79 @@ app.get("/athletes", async (req, res) => {
 });
 /********************************** End Of Table 1***************************************/
 
+/************************************ Table 2*************************************/
+const createTableAthletes= async () => {
+  try {
+    await client2.connect();
+    await client2.query(`
+            CREATE TABLE IF NOT EXISTS athletes (
+                stroke VARCHAR(255),
+                athleteName VARCHAR(255),
+                dob VARCHAR(255),
+                club VARCHAR(255),
+                recordDate VARCHAR(255),
+                recordTime VARCHAR(255),
+                city VARCHAR(255)
+            );
+        `);
+    console.log("Table Athletes created or already exists");
+  } catch (error) {
+    console.error("Error creating table:", error);
+  }
+};
 
+createTableAthletes();
+
+// File upload route
+app.post("/uploadAthlete", upload.single("file"), async (req, res) => {
+  try {
+    const results = [];
+
+    fs.createReadStream(req.file.path)
+      .pipe(csv())
+      .on("data", (data) => results.push(data))
+      .on("end", async () => {
+        for (const result of results) {
+          await client2.query(
+            `INSERT INTO athletes (
+                            stroke,
+                            athleteName,
+                            dob,
+                            club,
+                            recordDate,
+                            recordTime,
+                            city
+                        ) VALUES ($1, $2, $3, $4, $5, $6, $7)`,
+            [
+              result.stroke,
+              result.athleteName,
+              result.dob,
+              result.club,
+              result.recordDate,
+              result.recordTime,
+              result.city,
+            ]
+          );
+        }
+
+        res.status(200).send("File uploaded successfully");
+      });
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).send("Internal server error");
+  }
+});
+
+// Route to fetch athletes from database
+app.get("/viewAthlete", async (req, res) => {
+  try {
+    const queryResult = await client.query("SELECT * FROM athletes");
+    res.status(200).json(queryResult.rows);
+  } catch (error) {
+    console.error("Error fetching athletes:", error);
+    res.status(500).send("Error fetching athletes");
+  }
+});
 
 /************************************ End Of Table 2*************************************/
 

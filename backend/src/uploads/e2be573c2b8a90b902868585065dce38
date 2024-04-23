@@ -1,0 +1,53 @@
+stroke,athleteName,dob,club,recordDate,recordTime,city
+Freestyle,John Smith,1995-07-15,ABC Swimming Club,2024-04-24,1:45.32,New York
+Backstroke,Sarah Johnson,1998-03-20,XYZ Aquatics,2024-04-24,2:00.15,Los Angeles
+Butterfly,Michael Lee,1997-09-10,DEF Swim Team,2024-04-24,1:55.78,Chicago
+Breaststroke,Emily Wong,1996-12-05,GHI Swim Club,2024-04-24,2:10.45,Miami
+Freestyle,David Rodriguez,1999-05-30,JKL Swim Academy,2024-04-24,1:50.67,San Francisco
+Backstroke,Alexander Brown,1994-08-25,MNO Aquatics,2024-04-24,2:05.89,Dallas
+Butterfly,Sophia Martinez,1993-11-12,PQR Swimming Club,2024-04-24,1:58.32,Houston
+Breaststroke,Natalie Davis,1992-04-17,STU Swim Team,2024-04-24,2:12.34,Seattle
+Freestyle,Ethan Wilson,1991-01-22,VWX Swim Academy,2024-04-24,1:48.90,Boston
+Backstroke,Ava Thompson,1990-08-03,YZ Swim Club,2024-04-24,2:03.45,Atlanta
+Butterfly,Liam Anderson,1989-02-18,ABC Swimming Club,2024-04-24,1:56.78,Phoenix
+Breaststroke,Olivia Harris,1988-06-11,XYZ Aquatics,2024-04-24,2:14.56,Detroit
+Freestyle,Emma Taylor,1987-10-26,DEF Swim Team,2024-04-24,1:47.23,Detroit
+Backstroke,Noah Garcia,1986-03-09,GHI Swim Club,2024-04-24,2:01.34,Chicago
+Butterfly,Isabella Clark,1985-07-14,JKL Swim Academy,2024-04-24,1:54.90,Miami
+Breaststroke,Mason White,1984-11-29,MNO Aquatics,2024-04-24,2:08.76,Los Angeles
+Freestyle,Ava Rodriguez,1983-05-14,PQR Swimming Club,2024-04-24,1:46.54,San Francisco
+Backstroke,Lucas Martinez,1982-09-27,STU Swim Team,2024-04-24,2:00.89,Dallas
+Butterfly,Sophie Brown,1981-02-10,VWX Swim Academy,2024-04-24,1:57.32,New York
+Breaststroke,Jacob Johnson,1980-07-25,YZ Swim Club,2024-04-24,2:11.45,Houston
+Freestyle,Mia Wilson,1979-12-10,ABC Swimming Club,2024-04-24,1:49.67,Boston
+Backstroke,Logan Thompson,1978-04-05,XYZ Aquatics,2024-04-24,2:05.78,Seattle
+Butterfly,Emily Anderson,1977-08-20,DEF Swim Team,2024-04-24,1:55.12,Atlanta
+Breaststroke,Nathan Harris,1976-01-05,GHI Swim Club,2024-04-24,2:09.34,Phoenix
+Freestyle,Grace Taylor,1975-06-20,JKL Swim Academy,2024-04-24,1:48.45,Miami
+Backstroke,Joshua Garcia,1974-11-04,MNO Aquatics,2024-04-24,2:03.56,Detroit
+Butterfly,Chloe Clark,1973-03-21,PQR Swimming Club,2024-04-24,1:56.78,Chicago
+Breaststroke,Andrew White,1972-08-05,STU Swim Team,2024-04-24,2:10.90,San Francisco
+Freestyle,Olivia Rodriguez,1971-12-20,VWX Swim Academy,2024-04-24,1:45.32,Dallas
+Backstroke,James Martinez,1970-06-04,YZ Swim Club,2024-04-24,2:01.45,Los Angeles
+Butterfly,Emma Brown,1969-10-19,ABC Swimming Club,2024-04-24,1:54.23,New York
+Breaststroke,Michael Johnson,1968-03-04,XYZ Aquatics,2024-04-24,2:08.67,Houston
+Freestyle,Isabella Wilson,1967-07-19,DEF Swim Team,2024-04-24,1:47.89,Boston
+Backstroke,Liam Thompson,1966-12-03,GHI Swim Club,2024-04-24,2:03.12,Seattle
+Butterfly,Sophia Garcia,1965-04-18,JKL Swim Academy,2024-04-24,1:55.45,Atlanta
+Breaststroke,Noah Harris,1964-09-02,MNO Aquatics,2024-04-24,2:09.56,Phoenix
+Freestyle,Ava Taylor,1963-01-17,PQR Swimming Club,2024-04-24,1:46.78,Miami
+Backstroke,Lucas Clark,1962-06-02,STU Swim Team,2024-04-24,2:00.90,Dallas
+Butterfly,Sophie White,1961-10-17,VWX Swim Academy,2024-04-24,1:56.32,San Francisco
+Breaststroke,Jacob Rodriguez,1960-03-03,YZ Swim Club,2024-04-24,2:11.23,Chicago
+Freestyle,Mia Martinez,1959-07-18,ABC Swimming Club,2024-04-24,1:49.45,Los Angeles
+Backstroke,Logan Johnson,1958-12-03,XYZ Aquatics,2024-04-24,2:04.67,New York
+Butterfly,Emily Brown,1957-04-18,DEF Swim Team,2024-04-24,1:55.89,Houston
+Breaststroke,Nathan Taylor,1956-09-02,GHI Swim Club,2024-04-24,2:10.12,Boston
+Freestyle,Grace Garcia,1955-01-17,JKL Swim Academy,2024-04-24,1:48.34,Seattle
+Backstroke,Joshua Clark,1954-06-02,MNO Aquatics,2024-04-24,2:02.45,Atlanta
+Butterfly,Chloe Harris,1953-10-17,PQR Swimming Club,2024-04-24,1:57.56,Phoenix
+Breaststroke,Andrew Taylor,1952-03-03,STU Swim Team,2024-04-24,2:11.78,Miami
+Freestyle,Olivia Clark,1951-07-18,VWX Swim Academy,2024-04-24,1:45.90,Dallas
+Backstroke,James White,1950-12-03,YZ Swim Club,2024-04-24,2:00.32,San Francisco
+Butterfly,Emma Rodriguez,1949-04-18,ABC Swimming Club,2024-04-24,1:54.67,Chicago
+Breaststroke,Michael Martinez,1948-09-02,XYZ Aquatics,2024-04-24,2:08.78,Los Angeles

@@ -2,6 +2,7 @@ import React from "react";
 import Sidebar from "../../components/sidebar/SideBar";
 import Footer from "../../components/footer/Footer";
 import RecordsTable from "../../components/tables/RecordsTable";
+import RecordsPageTable from "../../components/tables/RecordsPageTable";
 
 const Records = () => {
   return (
@@ -18,7 +19,7 @@ const Records = () => {
 
           {/* Tables */}
           <div className="p-5">
-            <RecordsTable />
+            <RecordsPageTable />
           </div>
         </div>
       </div>

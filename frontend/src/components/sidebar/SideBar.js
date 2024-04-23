@@ -44,7 +44,7 @@ const Sidebar = () => {
           <div class="flex items-center justify-start mx-6 mt-10">
             <img class="h-10" src={bgImage} />
             <span class="text-white dark:text-gray-300 ml-4 text-2xl font-bold">
-              Tail-Kit
+              Swimming Web-App
             </span>
           </div>
 

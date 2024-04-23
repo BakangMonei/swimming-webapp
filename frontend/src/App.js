@@ -16,6 +16,7 @@ import MainLayout from "./layouts/MainLayout";
 import Rankings from "./layouts/rankings/Rankings";
 import CSVFormData from "./components/form/CSVFormData";
 import AthleteTable from "./components/tables/AthleteTable";
+import RecordsPageTable from "./components/tables/RecordsPageTable";
 
 // Create Redux store
 const store = createStore(rootReducer);
@@ -45,6 +46,8 @@ function App() {
           {/* Uncomment the following lines when you need private routes */}
           <Route path="/UserDashboard" element={<MainLayout />} />
           <Route path="/Rankings" element={<Rankings />} />
+
+          {/* <Route path="/RecordsPageTable" element={<RecordsPageTable/>}/> */}
           {/* <Route
             path="/UserDashboard"
             element={<PrivateRoute element={<MainLayout />} />}
