@@ -12,11 +12,13 @@ import SplashScreen from "./layouts/SplashScreen";
 import "./App.css";
 import LoginPage from "../src/auth/LoginPage";
 import { auth } from "./firebase/firebase";
+import HomePage from "./layouts/HomePage";
 import MainLayout from "./layouts/MainLayout";
 import Rankings from "./layouts/rankings/Rankings";
 import CSVFormData from "./components/form/CSVFormData";
 import AthleteTable from "./components/tables/AthleteTable";
 import RecordsPageTable from "./components/tables/RecordsPageTable";
+import Records from "./layouts/records/Records";
 
 // Create Redux store
 const store = createStore(rootReducer);
@@ -46,6 +48,9 @@ function App() {
           {/* Uncomment the following lines when you need private routes */}
           <Route path="/UserDashboard" element={<MainLayout />} />
           <Route path="/Rankings" element={<Rankings />} />
+          <Route path="/Records" element={<Records/>}/>
+
+          <Route path= "/HomePage" element = {<HomePage/>}/>
 
           {/* <Route path="/RecordsPageTable" element={<RecordsPageTable/>}/> */}
           {/* <Route

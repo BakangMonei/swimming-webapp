@@ -10,7 +10,7 @@ const Rankings = () => {
     <div>
       <div className="flex">
         {/* Sidebar */}
-        <Sidebar />
+        {/* <Sidebar /> */}
 
         <div className="flex flex-col flex-grow">
           {/* Records Header */}
