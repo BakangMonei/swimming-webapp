@@ -71,3 +71,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.carousel {
+  height: 100vh; /* Make the carousel full screen height */
+  width: 100%; /* Make the carousel full screen width */
+}
+
+.carousel-item {
+  height: 100%; /* Make each carousel item full screen height */
+  width: 100%; /* Make each carousel item full screen width */
+}
+.carousel img {
+  object-fit: cover; /* Make the images cover the entire carousel item */
+  height: 100%; /* Make the images full screen height */
+  width: 100%; /* Make the images full screen width */
+}
