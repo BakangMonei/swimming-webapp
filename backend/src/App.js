@@ -191,6 +191,25 @@ app.get("/viewAthlete", async (req, res) => {
 
 /************************************ End Of Table 2*************************************/
 
+
+/*************************************** VIEW ATHELETES BY DATE**********************************************/
+// Route to fetch athletes by record date
+app.get("/viewAthleteByDate", async (req, res) => {
+  try {
+    const startDate = req.query.startDate;
+    const endDate = req.query.endDate;
+    const queryResult = await client2.query(`
+      SELECT * FROM athletes
+      WHERE recordDate >= $1 AND recordDate <= $2
+    `, [startDate, endDate]);
+    res.status(200).json(queryResult.rows);
+  } catch (error) {
+    console.error("Error fetching athletes by date:", error);
+    res.status(500).send("Error fetching athletes by date");
+  }
+});
+
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

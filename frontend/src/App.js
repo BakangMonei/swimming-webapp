@@ -19,6 +19,7 @@ import CSVFormData from "./components/form/CSVFormData";
 import AthleteTable from "./components/tables/AthleteTable";
 import RecordsPageTable from "./components/tables/RecordsPageTable";
 import Records from "./layouts/records/Records";
+import RecordApplication from "./components/form/RecordApplication";
 
 // Create Redux store
 const store = createStore(rootReducer);
@@ -49,6 +50,8 @@ function App() {
           <Route path="/UserDashboard" element={<MainLayout />} />
           <Route path="/Rankings" element={<Rankings />} />
           <Route path="/Records" element={<Records/>}/>
+
+          <Route path="/RecordApplication" element={<RecordApplication/>}/ >
 
           <Route path= "/HomePage" element = {<HomePage/>}/>
 

@@ -18,13 +18,13 @@ const Rankings = () => {
             Rankings
           </h1>
 
-          <SearchComponent />
+          {/* <SearchComponent /> */}
 
           {/* Tables */}
           <div className="p-5">
             <RankingsTable />
 
-            <AthletesTable/>
+            {/* <AthletesTable/> */}
           </div>
         </div>
       </div>
